@@ -19,6 +19,16 @@
     --accent-light-700: #7AE0A6;
     --accent-light-800: #9EE8BE;
     --accent-light-900: #C2F1D6;
+    /* Accent Light RGB */
+    --accent-light-rgb-100: 15, 62, 35;
+    --accent-light-rgb-200: 24, 98, 56;
+    --accent-light-rgb-300: 33, 135, 77;
+    --accent-light-rgb-400: 41, 171, 97;
+    --accent-light-rgb-500: 50, 207, 118;
+    --accent-light-rgb-600: 86, 215, 142;
+    --accent-light-rgb-700: 122, 224, 166;
+    --accent-light-rgb-800: 158, 232, 190;
+    --accent-light-rgb-900: 194, 241, 214;
     /* Grey */
     --grey-100: #767878;
     --grey-200: #9E9F9F;

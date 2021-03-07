@@ -14,7 +14,7 @@ const ButtonGroupStyle = styled.div`
 }
 
 &.ButtonGroup--large > button {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 `
 

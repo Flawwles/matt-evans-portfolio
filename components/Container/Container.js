@@ -15,15 +15,14 @@ const ContainerContents = styled.div`
 
 const Container = ({children, background}) => {
     return (
-      <ContainerWrapper background={background}>
-        <ContainerContents>
-            {children}
-        </ContainerContents>
-      </ContainerWrapper>
+        <ContainerWrapper background={background}>
+            <ContainerContents>
+                {children}
+            </ContainerContents>
+        </ContainerWrapper>
     );
-  };
+};
 
 export default Container
-
 
 

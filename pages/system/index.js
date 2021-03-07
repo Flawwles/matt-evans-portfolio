@@ -9,16 +9,18 @@ export default function System() {
                 <section>
                     <h3>Button type</h3>
                     <ExampleDemo>
-                        <Button>Primary</Button>
-                        <Spacer x="1rem" />
-                        <Button type='secondary'>Secondary</Button>
+                        <ButtonGroup>
+                            <Button>Primary</Button>
+                            <Button type='secondary'>Secondary</Button>
+                        </ButtonGroup>
                     </ExampleDemo>
                     <h3>With jump</h3>
                     <p>Adding <Snippet>jump</Snippet> to the button will add a small hover animaton</p>
                     <ExampleDemo>
-                        <Button jump>Primary & jump</Button>
-                        <Spacer x="1rem" />
-                        <Button jump  type='secondary'>Secondary & jump</Button>
+                        <ButtonGroup>
+                            <Button jump>Primary</Button>
+                            <Button jump type='secondary'>Secondary</Button>
+                        </ButtonGroup>
                     </ExampleDemo>
                 </section>
                 <section>

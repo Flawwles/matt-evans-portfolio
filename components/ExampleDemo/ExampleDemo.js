@@ -15,7 +15,11 @@ const WrappedChildren = ({children}) => (
 const ExampleCompoent = styled.div`
 
   --border-radius: 0.2rem;
-
+  --main-color: var(--accent-light-400);
+  --main-color-opacity-50: rgba(var(--accent-light-rgb-400), 0.5);
+  --main-color-opacity-20: rgba(var(--accent-light-rgb-400), 0.2);
+  --main-color-opacity-10: rgba(var(--accent-light-rgb-400), 0.1);
+  
   position: relative;
   width: 100%;
   background: #f1f3f5;
@@ -68,14 +72,16 @@ const ExampleCompoent = styled.div`
     justify-content: center;
     padding: 0.5rem 1rem;
     cursor: pointer !important;
+    color: var(--grey-100);
+    font-size: 0.9rem;
     outline: none;
 }
 
 .code-button:focus {
   outline: none;
-  box-shadow: 0 0 0 4px #a5d8ff33, 0 0 1px 1px #4dabf7;
-  border-color: #4dabf7;
-  background: #a5d8ff33;
+  box-shadow: 0 0 0 4px var(--main-color-opacity-20), 0 0 1px 1px var(--main-color);
+  border-color: var(--main-color-opacity-50);
+  background: var(--main-color-opacity-10);
 }
 
 .resize > span {
@@ -88,13 +94,13 @@ const ExampleCompoent = styled.div`
 
 .resize:focus {
   outline: none;
-  box-shadow: 0 0 0 4px #a5d8ff33, 0 0 1px 1px #4dabf7;
-  border-color: #4dabf7;
-  background: #a5d8ff33;
+  box-shadow: 0 0 0 4px var(--main-color-opacity-20), 0 0 1px 1px var(--main-color-opacity-50);
+  border-color: var(--main-color);
+  background: var(--main-color-opacity-10);
 }
 
 .resize:focus .icon-fill {
-  fill: #4dabf7;
+  fill: var(--main-color);
 }
 
 .code {
@@ -126,23 +132,27 @@ export default function ExampleDemo ({children}) {
     const handleResizeStart = (e) => {
         e.preventDefault();
         resize.current.focus();
-        setStartX(e.clientX);
         setStartingWidth(example.current.offsetWidth)
-        console.log('start')
+        if(e.clientX) {
+            setStartX(e.clientX);
+        } else {
+            setStartX(e.changedTouches[0].pageX);
+        }
+        
         document.addEventListener("mousemove", dragMove);
+        document.addEventListener("touchmove", dragMove);
     }
-
 
     const handleResizeStop = () => {
         document.removeEventListener("mousemove", dragMove);
+        document.removeEventListener("touchmove", dragMove);
     }
 
     const dragMove = (e) => {
         if (e.clientX) {
             example.current.style.width = startingWidth + e.clientX - startX + "px";
         } else {
-            example.style.width =
-            startingWidth + e.changedTouches[0].pageX - startX + "px";
+            example.current.style.width = startingWidth + e.changedTouches[0].pageX - startX + "px";
         }
     };
 
@@ -153,8 +163,11 @@ export default function ExampleDemo ({children}) {
     
     useEffect( () => {
         resize.current.addEventListener("mousedown", handleResizeStart);
+        resize.current.addEventListener("touchstart", handleResizeStart);
+
         document.addEventListener('mouseup', handleResizeStop)
-    })
+        document.addEventListener('touchend', handleResizeStop)
+    }, [startX])
 
 
     return (
@@ -181,7 +194,9 @@ export default function ExampleDemo ({children}) {
                     </span>
                 </button>
             </div>
-            <button className="code-button" onClick={handleCodeButtonClick}>See code</button>
+            <button className="code-button" onClick={handleCodeButtonClick}>
+                { codeVisible ? "Show code" : 'Hide code'}
+            </button>
             <div className={ codeVisible ? "code hidden" : 'code'}>
                 <SyntaxHighlighter language="javascript" style={ocean}>
                     {jsxToString(<WrappedChildren>{children}</WrappedChildren>, {

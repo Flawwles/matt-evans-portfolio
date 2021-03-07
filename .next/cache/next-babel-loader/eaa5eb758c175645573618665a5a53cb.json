@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default {\n  border: 'test'\n};","map":{"version":3,"sources":["/Users/mevans/Dev/matt-evans-2020/components/ImageCard/ImageCardControls.js"],"names":["border"],"mappings":"AAAA,eAAe;AACXA,EAAAA,MAAM,EAAE;AADG,CAAf","sourcesContent":["export default {\n    border: 'test'\n}"]},"metadata":{},"sourceType":"module"}

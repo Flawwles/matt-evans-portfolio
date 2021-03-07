@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default {\n  width: '10px'\n};","map":{"version":3,"sources":["/Users/mevans/Dev/matt-evans-2020/components/ImageCard/ImageCardControls.js"],"names":["width"],"mappings":"AAAA,eAAe;AACXA,EAAAA,KAAK,EAAE;AADI,CAAf","sourcesContent":["export default {\n    width: '10px'\n}"]},"metadata":{},"sourceType":"module"}
