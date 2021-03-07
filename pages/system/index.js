@@ -1,11 +1,11 @@
-import { Container, Button, ButtonGroup, ExampleDemo, Spacer, Snippet } from "../../components/";
+import { Container, Button, ButtonGroup, ExampleDemo, Spacer, Snippet, ArticleTitle } from "../../components/";
 
 export default function System() {
 
     return (
         <Container>
             <article>
-                <h1>Buttons</h1>
+                <ArticleTitle id="buttons">Buttons</ArticleTitle>
                 <section>
                     <h3>Button type</h3>
                     <ExampleDemo>
@@ -31,32 +31,36 @@ export default function System() {
                             <Button>Primary</Button>
                             <Button type='secondary'>Secondary</Button>
                         </ButtonGroup>
-                    
                     </ExampleDemo>
                 </section>
                 <hr/>
             </article>
             <section>
-                <h1>Page container </h1>
+                <ArticleTitle id="container">Page container</ArticleTitle>
                 <h3>With a max width</h3>
-                <Container>background white</Container>
-                <Container background="dark">background dark</Container>
+                <ExampleDemo>
+                    <Container>background white</Container>
+                    <Container background="dark">background dark</Container>
+                </ExampleDemo>
+                <hr/>
             </section>
             <section>
-                <h1>Spacer</h1>
+                <ArticleTitle id="spacer">Spacer</ArticleTitle>
                 <h3>Add some space between elements</h3>
                 <ExampleDemo>
                     <div>A</div>
                     <Spacer x='3rem' />
                     <div>B</div>
                 </ExampleDemo>
+                <hr/>
             </section>
         
             <section>
-                <h1>Snippet</h1>
-                <h3>Add some space between elements</h3>
+                <ArticleTitle id="snippet">Snippet</ArticleTitle>
+                <h3>Default snippet</h3>
                 <ExampleDemo>
-                    <Snippet>Test</Snippet>
+                    <p><Snippet>#demo</Snippet></p>
+                    <p>I'm an <Snippet>inline</Snippet> snippet</p>
                 </ExampleDemo>
             </section>
         

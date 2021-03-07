@@ -8,3 +8,4 @@ export { default as ImageCard } from './ImageCard/ImageCard';
 export { default as ExampleDemo } from './ExampleDemo/ExampleDemo';
 export { default as Spacer } from './Spacer/Spacer';
 export { default as Snippet } from './Snippet/Snippet';
+export { default as ArticleTitle } from './Article/ArticleTitle';
