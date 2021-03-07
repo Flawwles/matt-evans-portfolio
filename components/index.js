@@ -1,5 +1,6 @@
 export { default as Container } from './Container/Container';
 export { default as Button } from './Button/Button';
+export { default as ButtonGroup } from './Button/ButtonGroup';
 export { default as Align } from './Align/Align';
 export { default as Heading } from './Heading/Heading';
 export { default as ControlInput } from './ControlInput/ControlInput';

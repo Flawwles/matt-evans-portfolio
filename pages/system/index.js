@@ -1,27 +1,39 @@
-import { Container, Button, ExampleDemo, Spacer, Snippet } from "../../components/";
+import { Container, Button, ButtonGroup, ExampleDemo, Spacer, Snippet } from "../../components/";
 
 export default function System() {
 
     return (
         <Container>
-            <section>
+            <article>
                 <h1>Buttons</h1>
-                <h3>Button type</h3>
-                <ExampleDemo>
-                    <Button>Primary</Button>
-                    <Spacer x="1rem" />
-                    <Button type='secondary'>Secondary</Button>
-                </ExampleDemo>
-                <h3>With jump</h3>
-                <p>Adding <Snippet>jump</Snippet> to the button will add a small hover animaton</p>
-                <ExampleDemo>
-                    <Button jump>Primary & jump</Button>
-                    <Spacer x="1rem" />
-                    <Button jump  type='secondary'>Secondary & jump</Button>
-                </ExampleDemo>
+                <section>
+                    <h3>Button type</h3>
+                    <ExampleDemo>
+                        <Button>Primary</Button>
+                        <Spacer x="1rem" />
+                        <Button type='secondary'>Secondary</Button>
+                    </ExampleDemo>
+                    <h3>With jump</h3>
+                    <p>Adding <Snippet>jump</Snippet> to the button will add a small hover animaton</p>
+                    <ExampleDemo>
+                        <Button jump>Primary & jump</Button>
+                        <Spacer x="1rem" />
+                        <Button jump  type='secondary'>Secondary & jump</Button>
+                    </ExampleDemo>
+                </section>
+                <section>
+                    <h3>Button groups</h3>
+                    <p>Buttons work best when wrapped in a <Snippet>ButtonGroup</Snippet> component — This allows for smarter spacing and responsive behaviour.</p>
+                    <ExampleDemo>
+                        <ButtonGroup>
+                            <Button>Primary</Button>
+                            <Button type='secondary'>Secondary</Button>
+                        </ButtonGroup>
+                    
+                    </ExampleDemo>
+                </section>
                 <hr/>
-            </section>
-
+            </article>
             <section>
                 <h1>Page container </h1>
                 <h3>With a max width</h3>
