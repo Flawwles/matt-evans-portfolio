@@ -1,7 +1,7 @@
 import jsxToString from 'jsx-to-string';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { ocean } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ExampleDemoStyles from './ExampleDemoStyles'
 
 // Hack to allow JSX-to-string to work
@@ -48,7 +48,7 @@ export default function ExampleDemo ({children}) {
     setCodeVisible(!codeVisible)
   }
   // Add event event listeners
-  useLayoutEffect( () => {
+  useEffect( () => {
     resize.current.addEventListener("mousedown", handleResizeStart);
     resize.current.addEventListener("touchstart", handleResizeStart);
 
@@ -88,7 +88,5 @@ export default function ExampleDemo ({children}) {
         </SyntaxHighlighter>
       </div>
     </ExampleDemoStyles>
- 
   )
 }
-
