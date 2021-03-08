@@ -49,7 +49,7 @@ export default function System() {
                 <h3>Add some space between elements</h3>
                 <ExampleDemo>
                     <div>A</div>
-                    <Spacer x='3rem' />
+                    <Spacer y='3rem' />
                     <div>B</div>
                 </ExampleDemo>
                 <hr/>

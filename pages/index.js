@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Button from '../components/Button/Button.js'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
     return (
@@ -19,9 +20,9 @@ export default function Home() {
           Codes and animates a bit here and there.
                 </h2>
                 <div>
-                    <Button type="primary" jump>Primary</Button>
-                    <Button type="secondary">Sec</Button>
-                    <Button>None</Button>
+                    <Link href="/system">
+                        <Button type="primary" jump >Design System</Button>
+                    </Link>
                 </div>
             </main>
         </div>
