@@ -27,7 +27,7 @@ const ExampleDemoStyles = styled.div`
         position: relative;
         border-radius: var(--border-radius);
         padding: 1.5rem 3rem 1.5rem 1.5rem;
-        min-width: 15rem;
+        min-width: 13rem;
         max-width: 100%;
     }
 
@@ -45,6 +45,7 @@ const ExampleDemoStyles = styled.div`
         transition: all 0.3s ease;
         cursor: ew-resize;
         user-select: none;
+        touch-action: none;
         border: none;
         background: transparent;
     }
