@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import useResizeObserver from "use-resize-observer";
+import useResizeObserver from "use-resize-observer/polyfilled";
 import getClasses from '../lib/getClasses';
 
 
@@ -19,17 +19,17 @@ const ButtonGroupStyle = styled.div`
 `
 
 const ButtonGroup = ({children}) => {
-    const { ref, width = 1 } = useResizeObserver();
+  const { ref, width = 1 } = useResizeObserver();
 
-    return (
-        <ButtonGroupStyle ref={ref} className={getClasses('ButtonGroup', {
-            'small': width <= 400,
-            'medium': width > 400 && width < 800,
-            'large': width >= 800
-        })}>
-            {children}
-        </ButtonGroupStyle>
-    )
+  return (
+    <ButtonGroupStyle ref={ref} className={getClasses('ButtonGroup', {
+      'small': width <= 400,
+      'medium': width > 400 && width < 800,
+      'large': width >= 800
+    })}>
+      {children}
+    </ButtonGroupStyle>
+  )
 }
 
 

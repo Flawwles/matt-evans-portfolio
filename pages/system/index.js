@@ -2,13 +2,10 @@ import styled from "styled-components";
 import { Container, Button, ButtonGroup, ExampleDemo, Spacer, Snippet, ArticleTitle } from "../../components/";
 import Navigation from './Navigation/Navigation.js'
 
-
 const SystemsStyles = styled.div`
 display: grid;
 grid-template-columns: 12rem minmax(0, 1fr);
-/* grid-template-columns: 8rem 1fr; */
 `
-
 
 export default function System() {
   
